@@ -1,0 +1,112 @@
+.not-found-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 24px;
+  min-height: calc(100vh - 140px);
+  background-color: var(--bg-color);
+}
+
+.not-found-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  max-width: 580px;
+  width: 100%;
+  padding: 60px 48px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+/* Illustration Container containing Compass and 404 text */
+.not-found-illustration-wrapper {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.not-found-icon-spin {
+  font-size: 11rem;
+  color: var(--primary-light);
+  opacity: 0.7;
+  position: absolute;
+  /* Rotate compass slowly */
+  animation: slowSpin 20s linear infinite;
+  z-index: 1;
+}
+
+.not-found-giant-text {
+  font-size: 4rem;
+  font-weight: 900;
+  color: var(--primary-color);
+  letter-spacing: -2px;
+  margin: 0;
+  z-index: 2;
+  position: relative;
+  text-shadow: 0 4px 10px rgba(26, 115, 232, 0.1);
+}
+
+.not-found-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--text-color);
+  margin: 0;
+}
+
+.not-found-description {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  line-height: 1.6;
+  max-width: 440px;
+  margin: 0;
+}
+
+.not-found-actions-row {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.not-found-btn {
+  flex-grow: 1;
+  justify-content: center;
+  padding: 12px 24px;
+}
+
+/* --- ANIMATION KEYFRAMES --- */
+@keyframes slowSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive adjustment */
+@media (max-width: 576px) {
+  .not-found-card {
+    padding: 32px 20px;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+  }
+  
+  .not-found-actions-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .not-found-btn {
+    width: 100%;
+  }
+}

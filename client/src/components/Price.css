@@ -1,0 +1,73 @@
+.price-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  font-family: var(--font-sans);
+  line-height: 1;
+}
+
+.price-current {
+  font-weight: 700;
+  color: var(--primary-color, #3b82f6);
+}
+
+.price-original {
+  text-decoration: line-through;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.price-discount-badge {
+  background-color: rgba(34, 197, 94, 0.15);
+  color: #22c55e;
+  font-size: 0.75em;
+  font-weight: 700;
+  padding: 4px 6px;
+  border-radius: 4px;
+}
+
+.price-size-sm {
+  font-size: 1.02rem;
+  gap: 8px;
+}
+.price-size-sm .price-original {
+  font-size: 0.85em;
+  margin-left: 2px;
+}
+.price-size-sm .price-discount-badge {
+  font-size: 0.72em;
+  padding: 3px 5px;
+}
+
+.price-size-md {
+  font-size: 1.1rem;
+}
+.price-size-md .price-original {
+  font-size: 0.85em;
+}
+
+.price-size-lg {
+  font-size: 1.5rem;
+  gap: 12px;
+}
+.price-size-lg .price-original {
+  font-size: 0.75em;
+}
+.price-size-lg .price-current {
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+.price-size-lg .price-discount-badge {
+  font-size: 0.65em;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+body.dark-theme .price-original {
+  color: #64748b;
+}
+
+body.dark-theme .price-current {
+  color: #60a5fa;
+}

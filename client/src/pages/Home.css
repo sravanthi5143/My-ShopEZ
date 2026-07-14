@@ -1,0 +1,406 @@
+.homepage-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+/* 1. Hero Section Styling */
+.hero-section {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 40px;
+  align-items: center;
+  background: linear-gradient(135deg, var(--primary-light) 0%, #ffffff 100%);
+  border-radius: var(--radius-lg);
+  padding: 48px;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  margin-top: 10px;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero-tagline {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 12px;
+}
+
+.hero-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--text-color);
+  margin: 0 0 16px;
+  letter-spacing: -0.5px;
+}
+
+.hero-description {
+  font-size: 1.05rem;
+  color: var(--text-light);
+  margin: 0 0 32px;
+  line-height: 1.6;
+}
+
+.hero-cta-group {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Buttons style */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  border: none;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--secondary-color);
+  border: 2px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+  border-color: var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+.btn-white {
+  background-color: #ffffff;
+  color: var(--primary-color);
+}
+
+.btn-white:hover {
+  background-color: var(--primary-light);
+  transform: translateY(-2px);
+}
+
+.hero-image-container {
+  width: 100%;
+  height: 380px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 2. Value Propositions Bar */
+.value-props-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: 24px;
+}
+
+.prop-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.prop-icon {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  flex-shrink: 0;
+}
+
+.prop-item h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin: 0 0 2px;
+}
+
+.prop-item p {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  margin: 0;
+}
+
+/* 3. Section Commons */
+.home-section {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.section-header h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin: 0 0 8px;
+}
+
+.section-header p {
+  font-size: 0.95rem;
+  color: var(--text-light);
+}
+
+.categories-grid, .products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: clamp(16px, 3vw, 24px);
+  min-width: 0; /* Prevent flex/grid blowout */
+}
+
+#categories-section {
+  gap: 16px; /* Tighten gap between header and grid */
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: clamp(16px, 3vw, 24px);
+  grid-auto-rows: 1fr;
+}
+
+/* 4. Offer Banner Section */
+.offer-banner-section {
+  background: linear-gradient(rgba(26, 115, 232, 0.9), rgba(21, 87, 176, 0.9)), url('https://placehold.co/1200x800/1a73e8/1557b0');
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--radius-lg);
+  padding: clamp(32px, 5vw, 60px) clamp(24px, 4vw, 48px);
+  color: #ffffff;
+  text-align: center;
+  box-shadow: var(--shadow-md);
+}
+
+.offer-banner-content {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.offer-badge {
+  background-color: var(--rating-color);
+  color: var(--text-color);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 50px;
+  letter-spacing: 0.5px;
+}
+
+.offer-banner-content h2 {
+  font-size: clamp(1.6rem, 1.4rem + 2vw, 2.2rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.25;
+}
+
+.offer-banner-content p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin-bottom: 8px;
+}
+
+/* 5. Reviews Section Styling */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: clamp(16px, 3vw, 24px);
+}
+
+.review-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: transform var(--transition-normal);
+}
+
+.review-card:hover {
+  transform: translateY(-4px);
+}
+
+.review-user-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.review-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--primary-light);
+}
+
+.review-user-row h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin: 0 0 2px;
+}
+
+.review-comment {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  line-height: 1.5;
+  font-style: italic;
+  margin: 0;
+}
+
+/* 6. Newsletter Styling */
+.newsletter-section {
+  background-color: var(--primary-light);
+  border-radius: var(--radius-lg);
+  padding: clamp(32px, 5vw, 48px);
+  text-align: center;
+}
+
+.newsletter-content {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.newsletter-content h2 {
+  font-size: clamp(1.4rem, 1.2rem + 1.5vw, 1.8rem);
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin: 0;
+}
+
+.newsletter-content p {
+  font-size: 0.95rem;
+  color: var(--secondary-color);
+  margin-bottom: 12px;
+}
+
+.newsletter-form {
+  display: flex;
+  width: 100%;
+  max-width: 500px;
+  gap: 12px;
+}
+
+.newsletter-form input {
+  flex-grow: 1;
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  outline: none;
+  font-size: 0.9rem;
+}
+
+.newsletter-form input:focus {
+  border-color: var(--primary-color);
+}
+
+.newsletter-submit-btn {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color var(--transition-fast);
+}
+
+.newsletter-submit-btn:hover {
+  background-color: var(--primary-dark);
+}
+
+/* RESPONSIVE SCALING */
+@media (max-width: 992px) {
+  .hero-section {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: clamp(24px, 4vw, 36px);
+  }
+  
+  .hero-image-container {
+    height: auto;
+    aspect-ratio: 4 / 3;
+    order: -1; /* Display image on top in tablet/mobile */
+  }
+  
+  .value-props-bar {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .newsletter-form {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .newsletter-form button {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .value-props-bar {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero-image-container {
+    aspect-ratio: 1 / 1;
+  }
+}

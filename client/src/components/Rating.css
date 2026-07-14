@@ -1,0 +1,22 @@
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 6px 0;
+}
+
+.rating .stars {
+  display: flex;
+  align-items: center;
+  color: var(--rating-color);
+}
+
+.rating .star-icon {
+  font-size: 0.95rem;
+  margin-right: 2px;
+}
+
+.rating-text {
+  font-size: 0.8rem;
+  color: var(--text-light);
+}

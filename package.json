@@ -1,0 +1,16 @@
+{
+  "name": "shopez-mern-stack",
+  "version": "1.0.0",
+  "description": "Shopezz - Premium MERN Stack E-Commerce Marketplace",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "install-all": "npm install && npm install --prefix client && npm install --prefix server",
+    "client": "npm run dev --prefix client",
+    "server": "npm run dev --prefix server",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

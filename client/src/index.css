@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #1a73e8;
+  --primary-dark: #1557b0;
+  --primary-light: #e8f0fe;
+  --secondary-color: #4f5e7b;
+  --bg-color: #f8f9fa;
+  --card-bg: #ffffff;
+  --text-color: #202124;
+  --text-light: #5f6368;
+  --border-color: #dadce0;
+  --error-color: #d93025;
+  --success-color: #188038;
+  --rating-color: #fabb05;
+  
+  --shadow-sm: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+  --shadow-md: 0 1px 3px 0 rgba(60, 64, 67, 0.3), 0 4px 8px 3px rgba(60, 64, 67, 0.15);
+  --shadow-lg: 0 4px 12px 0 rgba(60, 64, 67, 0.3), 0 8px 24px 3px rgba(60, 64, 67, 0.15);
+  
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  
+  --transition-fast: 0.15s ease-in-out;
+  --transition-normal: 0.25s ease-in-out;
+  
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+
+  /* Spacing Scale */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-8: 48px;
+  --space-10: 64px;
+}
+
+body.dark-theme {
+  --bg-color: #121212;
+  --card-bg: #1e1e1e;
+  --text-color: #e8eaed;
+  --text-light: #9aa0a6;
+  --border-color: #3c4043;
+  --primary-light: #1a273b;
+  
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.5), 0 1px 3px 1px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 1px 3px 0 rgba(0, 0, 0, 0.5), 0 4px 8px 3px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 4px 12px 0 rgba(0, 0, 0, 0.5), 0 8px 24px 3px rgba(0, 0, 0, 0.3);
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  overflow-x: hidden;
+  font-size: clamp(0.95rem, 0.9rem + 0.25vw, 1rem);
+  letter-spacing: -0.01em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-4);
+  line-height: 1.2;
+}
+
+h1 { font-size: clamp(1.75rem, 1.5rem + 1.25vw, 2.5rem); }
+h2 { font-size: clamp(1.5rem, 1.3rem + 1vw, 2rem); }
+h3 { font-size: clamp(1.25rem, 1.1rem + 0.75vw, 1.5rem); }
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--primary-color);
+}
+
+button {
+  font-family: var(--font-sans);
+  cursor: pointer;
+  border: none;
+}
+
+/* Base Image Handling for Responsiveness */
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Utilities */
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 clamp(16px, 4vw, 24px);
+}
+
+.main-content {
+  flex: 1 0 auto;
+  padding: clamp(24px, 4vw, 48px) 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar-brand, .nav-links a, .sidebar-menu-item, .product-name, .btn, .form-group label, .admin-table th, .admin-table td {
+  font-weight: 500;
+}
+
+/* Smooth color transition animations */
+body, .navbar, .footer, .product-card, .filter-sidebar, .modal-card, .btn, .stat-card, .table-card, .order-item-card, .feed-review-card, .write-review-form-box, .not-found-card, .specs-table, .specs-table td, .search-bar-input, .qty-picker, .form-group input, .form-group textarea, .profile-dropdown, .dropdown-menu {
+  transition: background-color var(--transition-normal), border-color var(--transition-normal), color var(--transition-normal), box-shadow var(--transition-normal);
+}

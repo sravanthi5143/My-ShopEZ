@@ -1,0 +1,166 @@
+/* 
+  =============================================================
+  MODERN NOTIFICATION SYSTEM OVERRIDES
+  For React-Toastify
+  =============================================================
+*/
+
+/* 1. Global Container Sizing & Positioning */
+.custom-toast-container {
+  width: 360px !important;
+  max-width: 95vw !important;
+  padding: 0 !important;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .custom-toast-container {
+    width: 90% !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    top: 10px !important;
+    right: auto !important;
+  }
+}
+
+/* 2. Toast Body Base Styles */
+.custom-toast {
+  border-radius: 12px !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+  font-family: var(--font-sans, system-ui, sans-serif) !important;
+  padding: 16px 20px !important;
+  margin-bottom: 12px !important;
+  cursor: default !important;
+  min-height: 64px !important;
+  display: flex !important;
+  align-items: flex-start !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* 3. Text and Typography */
+.Toastify__toast-body {
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 12px !important;
+}
+
+.Toastify__toast-body > div:last-child {
+  flex: 1 1 auto;
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.4;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+/* 4. Customizing Default Colors to Modern Soft Palettes */
+/* Success */
+.Toastify__toast-theme--colored.Toastify__toast--success {
+  background-color: #f0fdf4 !important;
+  color: #166534 !important;
+  border-color: #bbf7d0;
+}
+.Toastify__toast-theme--colored.Toastify__toast--success .Toastify__toast-icon svg {
+  fill: #16a34a !important;
+}
+
+/* Error */
+.Toastify__toast-theme--colored.Toastify__toast--error {
+  background-color: #fef2f2 !important;
+  color: #991b1b !important;
+  border-color: #fecaca;
+}
+.Toastify__toast-theme--colored.Toastify__toast--error .Toastify__toast-icon svg {
+  fill: #dc2626 !important;
+}
+
+/* Warning */
+.Toastify__toast-theme--colored.Toastify__toast--warning {
+  background-color: #fffbeb !important;
+  color: #92400e !important;
+  border-color: #fde68a;
+}
+.Toastify__toast-theme--colored.Toastify__toast--warning .Toastify__toast-icon svg {
+  fill: #d97706 !important;
+}
+
+/* Info */
+.Toastify__toast-theme--colored.Toastify__toast--info {
+  background-color: #eff6ff !important;
+  color: #1e40af !important;
+  border-color: #bfdbfe;
+}
+.Toastify__toast-theme--colored.Toastify__toast--info .Toastify__toast-icon svg {
+  fill: #2563eb !important;
+}
+
+/* 5. Icons Alignment */
+.Toastify__toast-icon {
+  width: 22px !important;
+  height: 22px !important;
+  margin-top: 2px !important;
+  flex-shrink: 0 !important;
+}
+
+/* 6. Close Button Styling */
+.Toastify__close-button {
+  color: inherit !important;
+  opacity: 0.5 !important;
+  align-self: flex-start !important;
+  margin-top: -2px !important;
+  margin-right: -8px !important;
+  padding: 4px !important;
+  transition: opacity 0.2s ease, background-color 0.2s ease !important;
+  border-radius: 6px !important;
+}
+
+.Toastify__close-button:hover {
+  opacity: 1 !important;
+  background-color: rgba(0, 0, 0, 0.05) !important;
+}
+
+/* 7. Animations - Smooth Slide */
+@keyframes customSlideInRight {
+  from { transform: translateX(120%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+@keyframes customSlideInTop {
+  from { transform: translate(-50%, -120%); opacity: 0; }
+  to { transform: translate(-50%, 0); opacity: 1; }
+}
+
+.Toastify__bounce-enter--top-right {
+  animation-name: customSlideInRight !important;
+  animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+}
+
+@media (max-width: 768px) {
+  .Toastify__bounce-enter--top-right {
+    animation-name: customSlideInTop !important;
+  }
+}
+
+/* Dark Theme Overrides */
+body.dark-theme .Toastify__toast-theme--colored.Toastify__toast--success {
+  background-color: #064e3b !important;
+  color: #d1fae5 !important;
+  border-color: #047857;
+}
+body.dark-theme .Toastify__toast-theme--colored.Toastify__toast--error {
+  background-color: #7f1d1d !important;
+  color: #fee2e2 !important;
+  border-color: #b91c1c;
+}
+body.dark-theme .Toastify__toast-theme--colored.Toastify__toast--warning {
+  background-color: #78350f !important;
+  color: #fef3c7 !important;
+  border-color: #b45309;
+}
+body.dark-theme .Toastify__toast-theme--colored.Toastify__toast--info {
+  background-color: #1e3a8a !important;
+  color: #dbeafe !important;
+  border-color: #1d4ed8;
+}
